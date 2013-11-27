@@ -110,7 +110,8 @@ public class Bootstrap {
 	{
 		try
 		{
-			String[] cmd = {"java","-jar", installRoot+ GET_DOWN, installRoot};
+			String javaHome = System.getProperty("java.home");
+			String[] cmd = {javaHome+"/bin/java","-jar", installRoot+ GET_DOWN, installRoot};
 			Runtime r = Runtime.getRuntime();
 			r.exec(cmd);
 		}
