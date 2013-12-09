@@ -21,10 +21,10 @@ public class Bootstrap {
 			System.out.println("This is Windows");
 			installRoot = System.getenv("AppData") +File.separator+ ".overwatch" + File.separator ;
 		} else if (isMac()) {
-			installRoot = System.clearProperty("user.home");
+			installRoot = System.clearProperty("user.home")+ File.separator+ ".overwatch" + File.separator ;
 			System.out.println("This is Mac");
 		} else if (isUnix()) {
-			installRoot = System.clearProperty("user.home") +File.separator+ ".overwatch" + File.separator ; //not dry
+			installRoot = System.clearProperty("user.home") + File.separator+ ".overwatch" + File.separator ; //not dry
 			System.out.println("This is Unix or Linux");
 		} else if (isSolaris()) {
 			System.out.println("This is Solaris");
